@@ -1,0 +1,334 @@
+/* style.css */
+
+/*
+   Personal academic homepage.
+   The accent color is TU-Wien-like blue, used as a theme color only;
+*/
+
+:root {
+  --accent: #0f6cb1;
+  --accent-dark: #084f84;
+  --accent-light: #eaf3fa;
+  --text: #111111;
+  --muted: #555555;
+  --border: #d7e2ec;
+  --background: #ffffff;
+  --panel: #f7fafc;
+  --max-width: 1180px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--background);
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 3rem 3rem;
+}
+
+.topofpage {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: flex-end;
+  padding-bottom: 1.4rem;
+  border-bottom: 10px solid var(--accent);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  line-height: 1.1;
+}
+
+.subtitle {
+  margin: .45rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.identity-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: .6rem;
+  font-family: "Lucida Console", Consolas, monospace;
+  font-size: .9rem;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem;
+  margin: 1rem 0 2rem;
+  padding: .35rem;
+  background: var(--accent);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: .35rem .7rem;
+}
+
+.navbar a:hover {
+  color: var(--accent);
+  background: white;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 2.75rem;
+  align-items: start;
+}
+
+.sidebar {
+  position: sticky;
+  top: 1rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  padding: 1rem 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+
+address {
+  font-style: normal;
+}
+
+.email {
+  white-space: nowrap;
+}
+
+.maincontent {
+  min-width: 0;
+}
+
+section {
+  margin-bottom: 2.2rem;
+}
+
+.intro {
+  font-size: 1.02rem;
+}
+
+h2 {
+  margin: 0 0 .7rem;
+  color: var(--accent-dark);
+  font-size: 1.45rem;
+  line-height: 1.25;
+}
+
+h3 {
+  margin-top: 1.4rem;
+  color: var(--accent-dark);
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+
+.small-links {
+  margin: 0;
+  font-size: .88rem;
+}
+
+.small-links a + a::before {
+  content: " · ";
+  color: var(--muted);
+}
+
+/* Links */
+
+a:link {
+  color: var(--accent);
+}
+
+a:visited {
+  color: #6b7280;
+}
+
+a:active {
+  color: #d1005d;
+}
+
+a:hover {
+  color: white;
+  background-color: var(--accent);
+  text-decoration: none;
+}
+
+.taglink {
+  display: inline-block;
+  margin-right: .35rem;
+  padding: .05rem .35rem;
+  border: 1px solid var(--accent);
+  border-radius: .2rem;
+  font-size: .72rem;
+  line-height: 1.25;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+.taglink:hover {
+  color: white;
+  background: var(--accent);
+}
+
+/* Publications */
+
+ol.pubs {
+  margin: 0;
+  padding-left: 2.3rem;
+}
+
+ol.pubs > li {
+  margin: 0 0 1.05rem;
+  padding-left: .35rem;
+}
+
+ol.pubs > li::marker {
+  color: var(--accent-dark);
+  font-weight: bold;
+}
+
+.pub-entry {
+  font-size: 1rem;
+}
+
+.pub-info {
+  margin-top: .15rem;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.pubtitle {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.coauthors {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 90%;
+  color: #444444;
+}
+
+.ref {
+  font-family: "Lucida Console", Consolas, monospace;
+}
+
+details {
+  margin-top: .35rem;
+}
+
+details > summary:first-of-type {
+  list-style-type: none;
+  cursor: pointer;
+  color: var(--accent-dark);
+  display: inline;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::before {
+  content: "+ ";
+  font-weight: bold;
+}
+
+details[open] summary::before {
+  content: "– ";
+}
+
+details p {
+  margin: .6rem 0 0;
+}
+
+dl.pubs {
+  margin-left: 0;
+}
+
+dl.pubs dt {
+  margin-left: 0;
+  margin-top: .75rem;
+}
+
+dl.pubs dd {
+  padding-bottom: .75rem;
+  margin-left: 0;
+  color: var(--muted);
+  font-size: 90%;
+}
+
+ul {
+  padding-left: 1.35rem;
+}
+
+li {
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+}
+
+.bottomofpage {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: .82rem;
+  font-style: italic;
+}
+
+/* Responsive layout */
+
+@media (max-width: 850px) {
+  .page {
+    padding: 1.25rem;
+  }
+
+  .topofpage {
+    display: block;
+  }
+
+  .identity-links {
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+
+  .layout {
+    display: block;
+  }
+
+  .sidebar {
+    position: static;
+    margin-bottom: 2rem;
+  }
+
+  .section-heading {
+    display: block;
+  }
+}
