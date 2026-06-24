@@ -1,3 +1,0 @@
-# cashenchris.github.io
-
-Hi.
