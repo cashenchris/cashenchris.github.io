@@ -23,7 +23,11 @@
 <div class="header-main">
 <div class="header-text">
   <h1>Christopher H. Cashen</h1>
-  <IMG SRC="./ChristopherHCashen2021.webp" alt="picture of Christopher Cashen" valign="top" height="200"
+<img
+  id="portrait"
+  src="./portraits/ChristopherHCashen2021.webp"
+  alt="picture of Christopher Cashen"
+  height="200"
   align="right">
 <address class="contact-block">
 <a href="https://dmg.tuwien.ac.at/fg1/UA.html">Algebra Group</a><br/>
@@ -35,7 +39,9 @@
             email: firstname dot lastname at my uni as written above dot ac dot at<br/>
   office: DA05A15 (Freihaus, Green section, Floor 5, A15)<br>
  orcid: <a href="https://orcid.org/0000-0002-6340-469X">0000-0002-6340-469X</a>
-          </address>
+  </address>
+  <br>
+  I do math. I like topics that mix algebra, geometry, and topology.
 <p class="header-links">
 <a href="cv.pdf">Curriculum vitae</a><br/>
 <a href="https://www.mat.univie.ac.at/~gagt/Seminar.html">Vienna Geometry and Analysis on Groups Seminar</a>
@@ -585,6 +591,27 @@ In particular, if the \(X_i\) are Cayley graphs of the \(G_i\) then
       </p>
 <p>Last updated June 24, 2026.</p>
 </footer>
-</div>
+	    </div>
+	    <script>
+  const fallbackPortrait = "./portraits/ChristopherHCashen2021.webp";
+
+  const alternatePortraits = [
+    "./portraits/chriseatschalk.webp",
+    "./portraits/ChristopherHCashen.webp",
+	    "./portraits/DSCN9696.webp",
+	    "./portraits/dude.webp",
+	    "./portraits/penguin.webp",
+	    "./portraits/wick.webp"
+  ];
+
+  let chosenPortrait = fallbackPortrait;
+
+  if (Math.random() >= 0.75 && alternatePortraits.length > 0) {
+    chosenPortrait =
+      alternatePortraits[Math.floor(Math.random() * alternatePortraits.length)];
+  }
+
+  document.getElementById("portrait").src = chosenPortrait;
+</script>
 </body>
 </html>
