@@ -41,7 +41,8 @@ body {
   gap: 2rem;
   align-items: flex-end;
   padding-bottom: 1.4rem;
-  border-bottom: 5px solid var(--accent);
+  border-bottom: 10px solid var(--accent);
+  margin-bottom: 2rem;
 }
 
 h1 {
@@ -65,24 +66,10 @@ h1 {
   font-size: .9rem;
 }
 
-.navbar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .25rem;
-  margin: 1rem 0 2rem;
-  padding: .35rem;
-  background: var(--accent);
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: .35rem .7rem;
-}
-
-.navbar a:hover {
-  color: var(--accent);
-  background: white;
+.header-rule {
+  border: 0;
+  border-top: 10px solid var(--accent);
+  margin: 1.5rem 0 2rem;
 }
 
 .layout {
