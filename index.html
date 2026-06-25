@@ -596,17 +596,15 @@ In particular, if the \(X_i\) are Cayley graphs of the \(G_i\) then
   const fallbackPortrait = "./portraits/ChristopherHCashen2021.webp";
 
   const alternatePortraits = [
-    "./portraits/chriseatschalk.webp",
-    "./portraits/ChristopherHCashen.webp",
-	    "./portraits/DSCN9696.webp",
-	    "./portraits/dude.webp",
-	    "./portraits/penguin.webp",
-	    "./portraits/wick.webp"
+"./portraits/chriseatschalk.webp",
+"./portraits/dude.webp",
+"./portraits/penguin.webp",
+"./portraits/wick.webp"
   ];
 
   let chosenPortrait = fallbackPortrait;
 
-  if (Math.random() >= 0.7 && alternatePortraits.length > 0) {
+  if (Math.random() >= 0.8 && alternatePortraits.length > 0) {
     chosenPortrait =
       alternatePortraits[Math.floor(Math.random() * alternatePortraits.length)];
   }
