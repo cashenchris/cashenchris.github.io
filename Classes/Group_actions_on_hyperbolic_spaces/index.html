@@ -39,8 +39,27 @@
   
 
 
-  <h2>Lecture Notes</h2>
-  <a href="./Lecture_Notes.pdf">Complete lecture notes</a> (in progress)<br>
+ <h2>Lecture Notes</h2>
+<a href="./Lecture_Notes.pdf">Complete lecture notes</a>
+(<span id="notes-date">in progress</span>)<br>
+
+<script>
+fetch("./Lecture_Notes.pdf", {method: "HEAD", cache: "no-store"})
+  .then(response => {
+    const modified = response.headers.get("Last-Modified");
+    if (modified) {
+      const date = new Date(modified);
+      document.getElementById("notes-date").textContent =
+        "Version of: " +
+        date.toLocaleDateString("en-GB", {
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+          timeZone: "Europe/Vienna"
+        });
+    }
+  });
+</script>
 
 
   <h2>Further reading</h2>
@@ -68,5 +87,5 @@
 <br>
 <br>
 <br>
-<!-- hhmts start -->Last modified: Fri Oct 30 08:19:35 CET 2026 <!-- hhmts end -->
+<!-- hhmts start -->Last modified: Fri Oct 30 08:25:56 CET 2026 <!-- hhmts end -->
 </body> </html>
